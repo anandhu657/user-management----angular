@@ -1,0 +1,10 @@
+.allUsers{
+    width: 500px;
+    height: auto;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: blanchedalmond;
+}

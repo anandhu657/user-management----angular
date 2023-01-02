@@ -1,0 +1,22 @@
+<div class="container pt-4">
+    <div class="row pb-3">
+        <div class="text-end">
+            <button mat-raised-button color="warn" (click)="OnLogout()">Logout</button>
+        </div>
+    </div>
+    <mat-card style="text-align: center;">
+        <div class="p-3">
+            <img src="{{ url }}" alt="profile pic" width="200px" height="200px">
+        </div>
+        <div class="pb-3">
+            <form enctype="multipart/form-data">
+                <input type="file" name="image" id="image" (change)="selectImg($event)" />
+                <button (click)="uploadImage()" class="btn btn-success">save</button>
+            </form>
+        </div>
+        <mat-card-content><b>Username: </b>{{user.username}}</mat-card-content>
+        <mat-card-content><b>Email: </b>{{user.email}}</mat-card-content>
+        <mat-card-content><b>Gender: </b>{{user.gender}}</mat-card-content>
+        <mat-card-content><b>Date of birth: </b>{{user.dob}}</mat-card-content>
+    </mat-card>
+</div>

@@ -1,0 +1,25 @@
+<div class="allUsers">
+  <div class="d-flex align-center p-3">
+      <input type="text" class="form-control" placeholder="search..." [(ngModel)]="searchTerm">
+      <button class="btn btn-primary m-2" (click)="search()">search</button>
+  </div>
+  
+<table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">user name</th>
+        <th scope="col">user email</th>
+        <th scope="col">actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of allUsers">
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td><button class="btn btn-danger" (click)="deleteUser(user)">delete</button></td>
+      </tr>
+    </tbody>
+  </table>
+</table>
+</div>
